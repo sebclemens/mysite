@@ -4,7 +4,7 @@ module.exports = {
         tasks: 'build'
     },
     sass: {
-        files: ['Styles/**/*.scss'],
+        files: ['Styles/**/*.sass'],
         tasks: 'compass'
     }
 };
