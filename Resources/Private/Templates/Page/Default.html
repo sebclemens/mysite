@@ -3,6 +3,10 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 <html>
 <head>
+    <f:section name="metadata">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </f:section>
+
     <f:section name="stylesheets">
         <!-- Put your stylesheet inclusions here, they will be included in your website by TypoScript -->
         <link rel="stylesheet" href="{f:uri.resource(path: 'Styles/Main.css', package: 'sebclemens.mysite')}" media="all"  />
