@@ -1,3 +1,9 @@
 # Vim temp files
 *.swp
 *.swo
+
+# NPM stuff
+Resources/Private/node_modules
+
+# SASS cache
+Resources/Private/.sass-cache
