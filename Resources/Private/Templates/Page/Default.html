@@ -3,26 +3,26 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 <html>
 <head>
-	<f:section name="stylesheets">
-		<!-- Put your stylesheet inclusions here, they will be included in your website by TypoScript -->
+    <f:section name="stylesheets">
+        <!-- Put your stylesheet inclusions here, they will be included in your website by TypoScript -->
         <link rel="stylesheet" href="{f:uri.resource(path: 'Styles/Main.css', package: 'sebclemens.mysite')}" media="all"  />
         
-	</f:section>
-	<f:section name="headScripts">
-		<!-- Put your scripts inclusions for the head here, they will be included in your website by TypoScript -->
-	</f:section>
+    </f:section>
+    <f:section name="headScripts">
+        <!-- Put your scripts inclusions for the head here, they will be included in your website by TypoScript -->
+    </f:section>
 </head>
 <body>
 <f:section name="body">
-	<nav class="menu">
-		{parts.menu -> f:format.raw()}
-	</nav>
-	<div class="content">
-		{content.main -> f:format.raw()}
-	</div>
+    <nav class="menu">
+        {parts.menu -> f:format.raw()}
+    </nav>
+    <div class="content">
+        {content.main -> f:format.raw()}
+    </div>
 </f:section>
 <f:section name="bodyScripts">
-	<!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
+    <!-- Put your scripts inclusions for the end of the body here, they will be included in your website by TypoScript -->
 </f:section>
 </body>
 </html>
