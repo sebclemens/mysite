@@ -21,22 +21,21 @@
     <nav class="menu">
         {parts.menu -> f:format.raw()}
     </nav>
-    <div id="compass-wrapper">
-        <ul>
-            <li><a href="#">A</a></li>
-            <li><a href="#">B</a></li>
-            <li><a href="#">C</a></li>
-            <li><a href="#">D</a></li>
-            <li><a href="#">E</a></li>
-            <li><a href="#">F</a></li>
-            <li><a href="#">G</a></li>
-            <li><a href="#">H</a></li> 
-        </ul>
+
         <div id="main-image">
             SC
+            <ul>
+                <li><a href="#" title="About"><span>A</span></a></li>
+                <li><a href="#" title="GitHub"><span>B</span></a></li>
+                <li><a href="#"><span>C</span></a></li>
+                <li><a href="#"><span>D</span></a></li>
+                <li><a href="#"><span>E</span></a></li>
+                <li><a href="#"><span>F</span></a></li>
+                <li><a href="#"><span>G</span></a></li>
+                <li><a href="#"><span>H</span></a></li> 
+            </ul>
         </div>
-    </div>
-    <div class="content">
+    <div class="row column">
         {content.main -> f:format.raw()}
     </div>
 </f:section>
