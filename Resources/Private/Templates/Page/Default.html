@@ -18,25 +18,23 @@
 </head>
 <body>
 <f:section name="body">
-    <nav class="menu">
-        {parts.menu -> f:format.raw()}
-    </nav>
-
-        <div id="compass">
-            SC
-            <ul>
-                <li><a href="#" title="About"><span>A</span></a></li>
-                <li><a href="#" title="GitHub"><span>B</span></a></li>
-                <li><a href="#"><span>C</span></a></li>
-                <li><a href="#"><span>D</span></a></li>
-                <li><a href="#"><span>E</span></a></li>
-                <li><a href="#"><span>F</span></a></li>
-                <li><a href="#"><span>G</span></a></li>
-                <li><a href="#"><span>H</span></a></li> 
-            </ul>
+    <div id="compass">
+        SC
+        <ul>
+            <li><a href="#" title="Über mich"><span class="icon-user"></span></a></li>
+            <li><a href="#" title="E-Mail"><span class="icon-envelope"></span></a></li>
+            <li><a href="#" title="Kontakt"><span class="icon-phone"></span></a></li>
+            <li><a href="#" title="Code-Skills"><span class="icon-code"></span></a></li>
+            <li><a href="#" title="Git" ><span class="icon-git"></span></a></li>
+            <li><a href="#" title="Xing"><span class="icon-xing"></span></a></li>
+            <li><a href="#" title="Privat"><span class="icon-lock"></span></a></li>
+            <li><a href="#" title="Engagement"><span class="icon-heart"></span></a></li> 
+        </ul>
+    </div>
+    <div id="main">
+        <div class="row column">
+            {content.main -> f:format.raw()}
         </div>
-    <div class="row column">
-        {content.main -> f:format.raw()}
     </div>
 </f:section>
 <f:section name="bodyScripts">
