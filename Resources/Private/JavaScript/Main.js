@@ -1,1 +1,1 @@
-$("#main-image").compass();
+$("#compass").compass();
