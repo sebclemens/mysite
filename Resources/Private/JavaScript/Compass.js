@@ -3,7 +3,7 @@
     $.fn.compass = function() {
 
         // Load
-        this.animate({"opacity": 1, "margin-top": "13rem"}, 2000, function() {
+        this.animate({"opacity": 1, "margin-top": "13rem"}, 1000, function() {
             $(this).find("li").each(function(index) {
                 $(this).css("transform", "rotate("+ index * -45  +"deg) translateY(-8rem)")
                 .css("opacity", 1); 
