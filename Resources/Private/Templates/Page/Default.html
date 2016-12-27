@@ -27,12 +27,10 @@
             <li><a href="#" title="Engagement"><span class="icon-heart"></span></a></li> 
         </ul>
     </div>
-    <div id="main">
-        <div class="row column">
-            {content.main -> f:format.raw()}
-            <div class="footer">
-                {parts.metaMenu -> f:format.raw()}
-            </div>
+    <div class="row column">
+        {content.main -> f:format.raw()}
+        <div class="footer">
+            {parts.metaMenu -> f:format.raw()}
         </div>
     </div>
 </f:section>
