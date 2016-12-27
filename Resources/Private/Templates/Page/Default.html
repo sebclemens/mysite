@@ -10,22 +10,18 @@
     <f:section name="stylesheets">
         <!-- Put your stylesheet inclusions here, they will be included in your website by TypoScript -->
         <link rel="stylesheet" href="{f:uri.resource(path: 'Styles/Main.css', package: 'sebclemens.mysite')}" media="all"  />
-        
-    </f:section>
-    <f:section name="headScripts">
-        <!-- Put your scripts inclusions for the head here, they will be included in your website by TypoScript -->
     </f:section>
 </head>
 <body>
 <f:section name="body">
+    {parts.mainMenu -> f:format.raw()}
     <div id="compass">
-        SC
         <ul>
             <li><a href="#" title="Über mich"><span class="icon-user"></span></a></li>
-            <li><a href="#" title="E-Mail"><span class="icon-envelope"></span></a></li>
+            <li><a href="mailto:hallo@sebclemens.de" title="E-Mail"><span class="icon-envelope"></span></a></li>
             <li><a href="#" title="Kontakt"><span class="icon-phone"></span></a></li>
             <li><a href="#" title="Code-Skills"><span class="icon-code"></span></a></li>
-            <li><a href="#" title="Git" ><span class="icon-git"></span></a></li>
+            <li><a href="https://github.com/sebclemens" title="GitHub" ><span class="icon-git"></span></a></li>
             <li><a href="#" title="Xing"><span class="icon-xing"></span></a></li>
             <li><a href="#" title="Privat"><span class="icon-lock"></span></a></li>
             <li><a href="#" title="Engagement"><span class="icon-heart"></span></a></li> 
@@ -34,6 +30,9 @@
     <div id="main">
         <div class="row column">
             {content.main -> f:format.raw()}
+            <div class="footer">
+                {parts.metaMenu -> f:format.raw()}
+            </div>
         </div>
     </div>
 </f:section>

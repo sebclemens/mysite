@@ -8,11 +8,6 @@ page = TYPO3.Neos:Page {
             sectionName = 'stylesheets'
         }
 
-        javascripts.site = TYPO3.TypoScript:Template {
-            templatePath = 'resource://sebclemens.mysite/Private/Templates/Page/Default.html'
-            sectionName = 'headScripts'
-        }
-
         metadata = TYPO3.TypoScript:Template {
             templatePath = 'resource://sebclemens.mysite/Private/Templates/Page/Default.html'
             sectionName = 'metadata'
@@ -23,7 +18,13 @@ page = TYPO3.Neos:Page {
         templatePath = 'resource://sebclemens.mysite/Private/Templates/Page/Default.html'
         sectionName = 'body'
         parts {
-            menu = TYPO3.Neos:Menu
+            mainMenu = TYPO3.Neos:Menu
+            metaMenu = TYPO3.Neos:Menu {
+                entryLevel = 2 
+                templatePath = 'resource://sebclemens.mysite/Private/Templates/TypoScriptObjects/MetaMenu.html'
+                maximumLevels = 1
+                startingPoint = ${q(site).children('[uriPathSegment="metamenu"]').get(0)}
+            }
         }
 
         // These are your content areas, you can define as many as you want, just name them and the nodePath.
@@ -39,4 +40,19 @@ page = TYPO3.Neos:Page {
             sectionName = 'bodyScripts'
         }
     }
+}
+
+default < page
+
+landingPage < page
+landingPage.body {
+    parts {
+        mainMenu >
+        compassMenu = TYPO3.Neos:Menu {
+            entryLevel = 2
+            templatePath = 'resource://sebclemens.mysite/Private/Templates/TypoScriptObjects/CompassMenu.html'
+            maximumLevels = 1
+            startingPoint = ${q(site).children('[uriPathSegment="compass"]').get(0)}
+    }
+    landingPage = ${true}
 }
